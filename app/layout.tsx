@@ -16,6 +16,9 @@ export const metadata: Metadata = {
     'coaching',
     'UK',
   ],
+  icons: {
+    icon: '/gtlogo/Gloteemlogo.png',
+  },
   openGraph: {
     title: BRAND.name,
     description: BRAND.tagline,
