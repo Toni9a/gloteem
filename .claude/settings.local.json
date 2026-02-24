@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run build:*)",
+      "Bash(/Users/toni/gloteem/components/Hero.tsx:*)",
+      "Bash(/Users/toni/gloteem/components/PillarCard.tsx:*)",
+      "Bash(/Users/toni/gloteem/components/TestimonialCard.tsx:*)",
+      "Bash(/Users/toni/gloteem/components/Footer.tsx:*)",
+      "Bash(/Users/toni/gloteem/app/page.tsx:*)",
+      "Bash(/Users/toni/gloteem/app/about/page.tsx:*)",
+      "Bash(/Users/toni/gloteem/app/services/page.tsx:*)",
+      "Bash(/Users/toni/gloteem/app/book/page.tsx:*)",
+      "Bash(/Users/toni/gloteem/app/contact/page.tsx:*)",
+      "Bash(/Users/toni/gloteem/components/ContactForm.tsx:*)",
+      "Bash(/Users/toni/gloteem/app/not-found.tsx:*)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(lsof:*)",
+      "Bash(xargs kill:*)",
+      "Bash(git add -A)",
+      "Bash(git commit:*)"
+    ]
+  }
+}
