@@ -1,57 +1,5 @@
-import Link from 'next/link';
 import Image from 'next/image';
 import { INTEGRATIONS, BRAND } from '@/config/integrations';
-
-const SocialLinks = () => (
-  <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', marginTop: '1rem' }}>
-    {/* LinkedIn */}
-    <a href={INTEGRATIONS.social.linkedin} target="_blank" rel="noopener noreferrer"
-      style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '36px', height: '36px', backgroundColor: 'rgba(255,255,255,0.08)', borderRadius: '8px', color: 'rgba(255,255,255,0.8)', transition: 'background-color 0.2s ease', textDecoration: 'none' }}
-      title="LinkedIn"
-    >
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-      </svg>
-    </a>
-    {/* YouTube */}
-    <a href={INTEGRATIONS.social.youtube} target="_blank" rel="noopener noreferrer"
-      style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '36px', height: '36px', backgroundColor: 'rgba(255,255,255,0.08)', borderRadius: '8px', color: 'rgba(255,255,255,0.8)', textDecoration: 'none' }}
-      title="YouTube"
-    >
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/>
-      </svg>
-    </a>
-    {/* Instagram */}
-    <a href={INTEGRATIONS.social.instagram} target="_blank" rel="noopener noreferrer"
-      style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '36px', height: '36px', backgroundColor: 'rgba(255,255,255,0.08)', borderRadius: '8px', color: 'rgba(255,255,255,0.8)', textDecoration: 'none' }}
-      title="Instagram"
-    >
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-      </svg>
-    </a>
-    {/* Facebook */}
-    <a href={INTEGRATIONS.social.facebook} target="_blank" rel="noopener noreferrer"
-      style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '36px', height: '36px', backgroundColor: 'rgba(255,255,255,0.08)', borderRadius: '8px', color: 'rgba(255,255,255,0.8)', textDecoration: 'none' }}
-      title="Facebook"
-    >
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-      </svg>
-    </a>
-    {/* Email */}
-    <a href={`mailto:${INTEGRATIONS.email.personal}`}
-      style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '36px', height: '36px', backgroundColor: 'rgba(255,255,255,0.08)', borderRadius: '8px', color: 'rgba(255,255,255,0.8)', textDecoration: 'none' }}
-      title="Email"
-    >
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-        <polyline points="22,6 12,13 2,6"/>
-      </svg>
-    </a>
-  </div>
-);
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -61,59 +9,88 @@ export default function Footer() {
       <div style={{ height: '3px', background: 'linear-gradient(to right, transparent, #C9A84C, transparent)' }} />
 
       <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '4rem 2rem 2rem' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '3rem', marginBottom: '3rem' }}>
+
+        {/* Main footer grid: Brand+Socials | Contact */}
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+          gap: '2.5rem',
+          marginBottom: '3rem',
+          alignItems: 'start',
+        }}>
 
           {/* Brand + Social */}
           <div>
             <div style={{ marginBottom: '0.75rem' }}>
-              <Image src="/gtlogo/Gloteemlogo.png" alt={BRAND.name} width={300} height={120} style={{ objectFit: 'contain', height: '200px', width: 'auto', filter: 'brightness(0) invert(1)' }} />
+              <Image
+                src="/gtlogo/Gloteemlogo.png"
+                alt={BRAND.name}
+                width={300}
+                height={120}
+                style={{ objectFit: 'contain', height: '160px', width: 'auto', filter: 'brightness(0) invert(1)' }}
+              />
             </div>
-            <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '0.875rem', lineHeight: '1.7', maxWidth: '240px', marginBottom: '0.5rem' }}>
+            <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '0.875rem', lineHeight: '1.7', maxWidth: '260px', marginBottom: '1.25rem' }}>
               {BRAND.tagline}
             </p>
-            <SocialLinks />
-          </div>
 
-          {/* Navigation */}
-          <div>
-            <h4 style={{ color: '#C9A84C', fontWeight: '700', fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '1rem' }}>
-              Navigation
-            </h4>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
-              {[
-                { label: 'Home', href: '/' },
-                { label: 'About', href: '/about' },
-                { label: 'Services', href: '/services' },
-                { label: 'Book', href: '/book' },
-                { label: 'Contact', href: '/contact' },
-              ].map((link) => (
-                <Link key={link.href} href={link.href}
-                  style={{ color: 'rgba(255,255,255,0.7)', textDecoration: 'none', fontSize: '0.9rem' }}
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          {/* Services */}
-          <div>
-            <h4 style={{ color: '#C9A84C', fontWeight: '700', fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '1rem' }}>
-              Services
-            </h4>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
-              {['Leadership Development', 'Organisational Change', 'Care Consultancy', 'Start-up Advisory'].map((s) => (
-                <span key={s} style={{ color: 'rgba(255,255,255,0.65)', fontSize: '0.875rem' }}>{s}</span>
-              ))}
+            {/* Social icons */}
+            <div style={{ display: 'flex', gap: '0.65rem', flexWrap: 'wrap' }}>
+              {/* LinkedIn */}
+              <a href={INTEGRATIONS.social.linkedin} target="_blank" rel="noopener noreferrer"
+                style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '38px', height: '38px', backgroundColor: 'rgba(255,255,255,0.08)', borderRadius: '8px', color: 'rgba(255,255,255,0.8)', textDecoration: 'none' }}
+                title="LinkedIn"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+              </a>
+              {/* YouTube */}
+              <a href={INTEGRATIONS.social.youtube} target="_blank" rel="noopener noreferrer"
+                style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '38px', height: '38px', backgroundColor: 'rgba(255,255,255,0.08)', borderRadius: '8px', color: 'rgba(255,255,255,0.8)', textDecoration: 'none' }}
+                title="YouTube"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/>
+                </svg>
+              </a>
+              {/* Instagram */}
+              <a href={INTEGRATIONS.social.instagram} target="_blank" rel="noopener noreferrer"
+                style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '38px', height: '38px', backgroundColor: 'rgba(255,255,255,0.08)', borderRadius: '8px', color: 'rgba(255,255,255,0.8)', textDecoration: 'none' }}
+                title="Instagram"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+              </a>
+              {/* Facebook */}
+              <a href={INTEGRATIONS.social.facebook} target="_blank" rel="noopener noreferrer"
+                style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '38px', height: '38px', backgroundColor: 'rgba(255,255,255,0.08)', borderRadius: '8px', color: 'rgba(255,255,255,0.8)', textDecoration: 'none' }}
+                title="Facebook"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+              </a>
+              {/* Email */}
+              <a href={`mailto:${INTEGRATIONS.email.contact}`}
+                style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '38px', height: '38px', backgroundColor: 'rgba(255,255,255,0.08)', borderRadius: '8px', color: 'rgba(255,255,255,0.8)', textDecoration: 'none' }}
+                title="Email"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </a>
             </div>
           </div>
 
           {/* Contact */}
           <div>
-            <h4 style={{ color: '#C9A84C', fontWeight: '700', fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '1rem' }}>
+            <h4 style={{ color: '#C9A84C', fontWeight: '700', fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '1.1rem' }}>
               Contact
             </h4>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem', marginBottom: '1.5rem' }}>
               <a href={`mailto:${INTEGRATIONS.email.contact}`}
                 style={{ color: 'rgba(255,255,255,0.7)', textDecoration: 'none', fontSize: '0.875rem' }}
               >
@@ -125,24 +102,23 @@ export default function Footer() {
                 {INTEGRATIONS.email.personal}
               </a>
             </div>
-            <div style={{ marginTop: '1.5rem' }}>
-              <a
-                href={INTEGRATIONS.calendly.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ backgroundColor: '#E07B39', color: 'white', padding: '0.6rem 1.25rem', borderRadius: '6px', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', display: 'inline-block' }}
-              >
-                Book a Consultation
-              </a>
-            </div>
+            <a
+              href={INTEGRATIONS.calendly.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ backgroundColor: '#E07B39', color: 'white', padding: '0.6rem 1.25rem', borderRadius: '6px', textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600', display: 'inline-block' }}
+            >
+              Book a Consultation
+            </a>
           </div>
+
         </div>
 
         <div style={{ borderTop: '1px solid rgba(255,255,255,0.08)', paddingTop: '1.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
-          <p style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.8rem' }}>
+          <p style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.8rem', margin: 0 }}>
             © {year} {BRAND.name}. All rights reserved.
           </p>
-          <p style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.8rem' }}>
+          <p style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.8rem', margin: 0 }}>
             {INTEGRATIONS.domain}
           </p>
         </div>

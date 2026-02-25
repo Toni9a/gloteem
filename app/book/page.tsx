@@ -64,6 +64,14 @@ export default function BookPage() {
                 >
                   Buy on Amazon →
                 </a>
+                <a
+                  href="https://read.amazon.co.uk/sample/B0GK2LWNS1?f=1&l=en_GB&r=d4eada89&rid=DJE7V68WZNWKWPKK599B&sid=520-9095145-6084664&cid=A282VEL9C9IA98&ref_=litb_m"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ border: '2px solid #1B2A4A', color: '#1B2A4A', padding: '0.85rem 2rem', borderRadius: '6px', fontWeight: '700', textDecoration: 'none', fontSize: '1rem', display: 'inline-block', backgroundColor: 'transparent' }}
+                >
+                  Read Sample
+                </a>
               </div>
             </div>
           </div>

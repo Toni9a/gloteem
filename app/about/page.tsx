@@ -12,7 +12,7 @@ export default function AboutPage() {
   return (
     <main>
       <Hero
-        backgroundImage="/headshot/glory.jpeg"
+        backgroundImage="/headshot/family_pic.png"
         headline={aboutContent.name}
         subheadline={aboutContent.subheading}
         compact={true}
